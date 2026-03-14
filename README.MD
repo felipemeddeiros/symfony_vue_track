@@ -10,7 +10,7 @@ A full-stack web application for managing music tracks, built with Symfony 6+ ba
 cd backend
 composer install
 cp .env .env.local
-# Edit .env.local with your MySQL credentials (see QUICK_START.md for examples)
+# Edit .env.local with your MySQL credentials
 php bin/console doctrine:database:create
 php bin/console doctrine:migrations:migrate
 symfony serve
@@ -28,7 +28,7 @@ npm run dev
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:8000/api/tracks
 
-**Important:** Make sure to configure your database credentials in `backend/.env.local` before running the database commands.
+**Important:** Use the committed `backend/.env` as the base config, then override local machine settings in `backend/.env.local` before running the database commands.
 
 ---
 
@@ -100,4 +100,3 @@ npm run dev
    - Validation lives on DTOs (PHP 8 attributes: NotBlank, Positive, Regex); entity has no constraints.
    - Controller validates DTO with ValidationService before calling TrackService; invalid requests return 422 with field-level errors.
    - Dual-layer validation (client + server); real-time client-side feedback.
-
