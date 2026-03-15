@@ -1,7 +1,6 @@
 # Backend (Symfony)
 backend/vendor/
 backend/var/
-backend/.env
 backend/.env.local
 backend/.env.local.php
 backend/.env.*.local
